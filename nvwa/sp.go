@@ -8,7 +8,8 @@ import (
 
 type SPCreateReq struct {
 	Token string `json:"token"`
-	VN    vn.ID  `json:"vn"`
+	VN    string `json:"vn"`
+	Scope string `json:"scope"`
 	ID    string `json:"id"`
 }
 

@@ -6,5 +6,5 @@ import (
 
 type Service interface {
 	VNCreate(req VNCreateReq) (*VNCreateResp, *errors.Error)
-	SPCreate(req SPCreateReq) (*SPCreateReq, *errors.Error)
+	SPCreate(req SPCreateReq) (*SPCreateResp, *errors.Error)
 }
