@@ -34,3 +34,8 @@ type SPLoadReq struct {
 	IDs  []sp.ID    `json:"ids"`
 	Page *load.Page `json:"page"`
 }
+
+type SPLoadResp struct {
+	Paging *load.Paging `bson:"paging" json:"paging"`
+	Items  []*vn.VN     `bson:"items" json:"items"`
+}
