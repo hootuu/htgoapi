@@ -8,6 +8,7 @@ import (
 
 type Service interface {
 	CoinIssue(req CoinIssueReq) (*CoinIssueResp, *errors.Error)
+	CoinGet(req CoinGetReq) (*uc.Coin, *errors.Error)
 	AccountCreate(req AccountCreateReq) (*AccountCreateResp, *errors.Error)
 	AccountGet(req AccountGetReq) (*uc.Account, *errors.Error)
 	AccountLoad(req AccountLoadReq) ([]*uc.Account, *load.Paging, *errors.Error)

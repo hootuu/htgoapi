@@ -1,6 +1,7 @@
 package treas
 
 import (
+	"github.com/hootuu/htgoapi/types/load"
 	"github.com/hootuu/tome/uc"
 	"github.com/hootuu/tome/vn"
 )
@@ -15,4 +16,9 @@ type CoinIssueReq struct {
 
 type CoinIssueResp struct {
 	Coin *uc.Coin `json:"coin"`
+}
+
+type CoinGetReq struct {
+	By   load.ByCode `json:"by"`
+	Coin uc.Code     `json:"coin"`
 }
