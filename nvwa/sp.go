@@ -1,16 +1,19 @@
 package nvwa
 
 import (
+	"github.com/hootuu/htgoapi/types/load"
+	"github.com/hootuu/tome/fq"
 	"github.com/hootuu/tome/ki"
 	"github.com/hootuu/tome/sp"
 	"github.com/hootuu/tome/vn"
 )
 
 type SPCreateReq struct {
-	Token string `json:"token"`
-	VN    string `json:"vn"`
-	Scope string `json:"scope"`
-	ID    string `json:"id"`
+	Token string   `json:"token"`
+	VN    string   `json:"vn"`
+	Scope string   `json:"scope"`
+	ID    string   `json:"id"`
+	FQ    []*fq.FQ `json:"fq"`
 }
 
 type SPCreateResp struct {
@@ -20,4 +23,14 @@ type SPCreateResp struct {
 	Originator ki.Ki   `json:"originator"`
 	Guardian   ki.Ki   `json:"guardian"`
 	Dob        int64   `json:"dob"`
+}
+
+type SPGetReq struct {
+	By load.ByCode `json:"by"`
+	ID sp.ID       `json:"id"`
+}
+
+type SPLoadReq struct {
+	IDs  []sp.ID    `json:"ids"`
+	Page *load.Page `json:"page"`
 }

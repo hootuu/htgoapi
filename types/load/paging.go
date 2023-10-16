@@ -98,11 +98,11 @@ func PagingALL() Paging {
 }
 
 type Pagination struct {
-	Paging Paging `bson:"paging" json:"paging"`
-	Items  []any  `bson:"items" json:"items"`
+	Paging *Paging `bson:"paging" json:"paging"`
+	Items  []any   `bson:"items" json:"items"`
 }
 
-func PagingWrap[T any](paging Paging, arr []*T, wrap func(m *T) any) Pagination {
+func PagingWrap[T any](paging *Paging, arr []*T, wrap func(m *T) any) Pagination {
 	if len(arr) == 0 {
 		return Pagination{
 			Paging: paging,
