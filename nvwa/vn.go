@@ -27,3 +27,8 @@ type VNLoadReq struct {
 	IDs  []vn.ID    `json:"ids"`
 	Page *load.Page `json:"page"`
 }
+
+type VNLoadResp struct {
+	Paging *load.Paging `bson:"paging" json:"paging"`
+	Items  []*vn.VN     `bson:"items" json:"items"`
+}

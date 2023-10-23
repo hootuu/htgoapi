@@ -32,10 +32,11 @@ type SPGetReq struct {
 
 type SPLoadReq struct {
 	IDs  []sp.ID    `json:"ids"`
+	VNs  []vn.ID    `json:"vns"`
 	Page *load.Page `json:"page"`
 }
 
 type SPLoadResp struct {
 	Paging *load.Paging `bson:"paging" json:"paging"`
-	Items  []*vn.VN     `bson:"items" json:"items"`
+	Items  []*sp.SP     `bson:"items" json:"items"`
 }

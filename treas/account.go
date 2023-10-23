@@ -20,3 +20,8 @@ type AccountLoadReq struct {
 	Owners []uc.AccountOwner `json:"owners"`
 	Page   *load.Page        `json:"page"`
 }
+
+type AccountLoadResp struct {
+	Paging *load.Paging  `bson:"paging" json:"paging"`
+	Items  []*uc.Account `bson:"items" json:"items"`
+}

@@ -30,7 +30,12 @@ type NodeInfo struct {
 	LST    int64  `json:"lst"`
 }
 
+type NodeLoadResp struct {
+	Paging *load.Paging `json:"paging"`
+	Items  []*NodeInfo  `json:"items"`
+}
+
 type Service interface {
 	Ping(req PingReq) (*PingResp, *errors.Error)
-	NPLoad(req NodeLoadReq) ([]*NodeInfo, *load.Paging, *errors.Error)
+	NPLoad(req NodeLoadReq) (*NodeLoadResp, *errors.Error)
 }
