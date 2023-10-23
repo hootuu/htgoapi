@@ -7,5 +7,5 @@ type YinPlantReq struct {
 }
 
 type YinPlantResp struct {
-	YID *yn.YID `json:"yid"`
+	YID yn.YID `json:"yid"`
 }

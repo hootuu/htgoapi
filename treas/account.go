@@ -25,3 +25,13 @@ type AccountLoadResp struct {
 	Paging *load.Paging  `bson:"paging" json:"paging"`
 	Items  []*uc.Account `bson:"items" json:"items"`
 }
+
+type AlterLoadReq struct {
+	Lead *uc.AccountLead `json:"lead"`
+	Page *load.Page      `json:"page"`
+}
+
+type AlterLoadResp struct {
+	Paging *load.Paging `bson:"paging" json:"paging"`
+	Items  []*uc.Alter  `bson:"items" json:"items"`
+}

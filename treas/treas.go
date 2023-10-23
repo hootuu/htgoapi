@@ -11,4 +11,5 @@ type Service interface {
 	AccountCreate(req AccountCreateReq) (*AccountCreateResp, *errors.Error)
 	AccountGet(req AccountGetReq) (*uc.Account, *errors.Error)
 	AccountLoad(req AccountLoadReq) (*AccountLoadResp, *errors.Error)
+	AlterLoad(req AlterLoadReq) (*AlterLoadResp, *errors.Error)
 }

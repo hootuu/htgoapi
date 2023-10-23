@@ -2,9 +2,8 @@ module github.com/hootuu/htgoapi
 
 go 1.20
 
-//replace github.com/hootuu/tome => /Users/suuyoo.wg/hootuu/tome
-//
-//replace github.com/hootuu/utils => /Users/suuyoo.wg/hootuu/utils
+replace github.com/hootuu/tome => ../tome
+replace github.com/hootuu/utils => ../utils
 
 require (
 	github.com/hootuu/tome v0.0.0-20231016100625-a653460bc7ae
