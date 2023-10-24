@@ -12,6 +12,6 @@ type ValueLoadReq struct {
 }
 
 type ValueLoadResp struct {
-	Paging *load.Paging   `bson:"paging" json:"paging"`
-	Items  []*value.Value `bson:"items" json:"items"`
+	Paging *load.Paging  `bson:"paging" json:"paging"`
+	Items  []value.Value `bson:"items" json:"items"`
 }
