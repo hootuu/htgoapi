@@ -6,7 +6,7 @@ go 1.20
 //replace github.com/hootuu/utils => ../utils
 
 require (
-	github.com/hootuu/tome v1.0.0
+	github.com/hootuu/tome v1.0.1
 	github.com/hootuu/utils v1.0.0
 )
 
