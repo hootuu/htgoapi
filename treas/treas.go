@@ -12,4 +12,11 @@ type Service interface {
 	AccountGet(req AccountGetReq) (*uc.Account, *errors.Error)
 	AccountLoad(req AccountLoadReq) (*AccountLoadResp, *errors.Error)
 	AlterLoad(req AlterLoadReq) (*AlterLoadResp, *errors.Error)
+
+	NftIssue(req NftIssueReq) (*NftIssueResp, *errors.Error)
+	NftAirdrop(req NftAirdropReq) (*NftAirdropResp, *errors.Error)
+	NftPledge(req NftPledgeReq) (*NftPledgeResp, *errors.Error)
+	NftRent(req NftRentReq) (*NftRentResp, *errors.Error)
+	NftTrans(req NftTransReq) (*NftTransResp, *errors.Error)
+	NftMine(req NftMineReq) (*NftMineResp, *errors.Error)
 }
